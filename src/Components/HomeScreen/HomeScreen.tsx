@@ -1,3 +1,4 @@
+import CategoryMenu from "../NavBar/CategoryMenu";
 import NabBar from "../NavBar/NabBar";
 import HeroImage from "./Components/HeroImage";
 
@@ -6,6 +7,7 @@ const HomeScreen = () => {
     <div>
       <NabBar />
       <HeroImage />
+      <CategoryMenu />
     </div>
   );
 };

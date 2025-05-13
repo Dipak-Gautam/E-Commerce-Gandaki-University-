@@ -1,4 +1,3 @@
-import React from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { PiShoppingCartSimple } from "react-icons/pi";
 
@@ -14,16 +13,16 @@ const NabBar = () => {
             type="text"
             className="text-xl border-none focus:outline-none p-1"
           />
-          <IoSearchSharp className="font-bold text-2xl" />
+          <IoSearchSharp className="font-bold text-2xl text-gray-600" />
         </div>
         <div className="flex gap-1 items-center">
           <div className="relative">
-            <PiShoppingCartSimple className="text-3xl" />
+            <PiShoppingCartSimple className="text-3xl text-gray-600 font-bold" />
             <div className="bg-indigo-600 rounded-full flex justify-center items-center text-[10px] absolute w-4 h-4 text-white -right-2 -top-1">
               0
             </div>
           </div>
-          <div className="border  rounded-xl p-1 px-3 text-semibold bg-orange-500 ml-4 cursor-pointer hover:bg-orange-400 text-white font-semibold">
+          <div className="border  rounded-xl p-2 px-5 text-semibold bg-orange-500 ml-4 cursor-pointer hover:bg-orange-400 text-white font-semibold">
             sign in
           </div>
         </div>
