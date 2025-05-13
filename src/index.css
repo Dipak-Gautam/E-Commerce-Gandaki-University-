@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 5px rgba(5, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 15px rgba(91, 80, 80, 0.4);
+  }
+}
