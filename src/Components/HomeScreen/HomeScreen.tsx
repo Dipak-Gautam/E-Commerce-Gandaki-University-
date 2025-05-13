@@ -1,7 +1,11 @@
-import React from "react";
+import NabBar from "../NavBar/NabBar";
 
 const HomeScreen = () => {
-  return <div>hello from home screen</div>;
+  return (
+    <div>
+      <NabBar />
+    </div>
+  );
 };
 
 export default HomeScreen;
