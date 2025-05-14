@@ -14,6 +14,9 @@ const HeroImage = () => {
           shopping for food easy, fast, and affordable. Enjoy the taste of
           quality with every bite!"
         </div>
+        <div className="mx-16 bg-white w-fit p-2 px-4 rounded-lg shadow-md shadow-white/60 hover:scale-105">
+          View Menu
+        </div>
       </div>
     </div>
   );
