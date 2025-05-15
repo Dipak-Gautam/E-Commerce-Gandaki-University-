@@ -1,8 +1,6 @@
-import React from "react";
-
 const CategoryMenu = () => {
   return (
-    <div className="mx-28 my-16 ">
+    <div className="mx-20 my-10 border-b pb-6 ">
       <div className="my-10 text-2xl font-bold">Categories</div>
       <div className="flex justify-between items-center w-[80%] mx-auto">
         <div className="flex flex-col items-center">

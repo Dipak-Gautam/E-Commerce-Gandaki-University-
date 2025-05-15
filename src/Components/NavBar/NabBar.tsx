@@ -3,7 +3,7 @@ import { PiShoppingCartSimple } from "react-icons/pi";
 
 const NabBar = () => {
   return (
-    <div className=" p-1 flex justify-between items-center mx-24">
+    <div className="  flex justify-between items-center mx-20">
       <div className="flex rounded-lg overflow-hidden ">
         <img src="/logo2.jpg" className="h-16  " />
       </div>
