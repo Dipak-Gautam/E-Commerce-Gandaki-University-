@@ -28,7 +28,7 @@ const data = {
 
 const ProductCard = () => {
   return (
-    <div className="border w-96 rounded-xl overflow-hidden shadow-lg bg-slate-50 hover:bg-white shadow-black/30 m-3 hover:shadow-xl  hover:border-white hover:shadow-black/50 transition-all duration-300 ease-in-out">
+    <div className="border w-72 rounded-xl overflow-hidden shadow-lg bg-slate-50 hover:bg-white shadow-black/30 m-3 hover:shadow-xl  hover:border-white hover:shadow-black/50 transition-all duration-300 ease-in-out">
       <div className="relative">
         <img src={`${data.image}`} alt="" />
         <div className="absolute top-1 right-1 rounded-full p-2 shadow-md">
@@ -40,12 +40,12 @@ const ProductCard = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 py-1 pb-5 flex flex-col items-center gap-2">
+      <div className="px-4 py-1 pb-5 flex flex-col items-center gap-3">
         <div className="text-sm  text-gray-400 m-0 p-0 -mb-2">
           {data.category}
         </div>
         <div className="flex justify-between items-center w-full gap-2">
-          <div className="text-xl font-bold text-black">{data.name}</div>
+          <div className="text-lg font-bold text-black">{data.name}</div>
           <StarCalc rating={Number(data.rating)} />
         </div>
         <div className="flex justify-between items-center w-full">

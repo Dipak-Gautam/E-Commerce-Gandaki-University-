@@ -10,7 +10,7 @@ const StarCalc = ({ rating }: StarCalcProps) => {
       {Array.from({ length: 5 }, (_, index) => (
         <IoMdStar
           key={index}
-          className={`text-2xl ${
+          className={`text-xl ${
             index < rating ? "text-[#e9b635]" : "text-gray-300"
           }`}
         />
