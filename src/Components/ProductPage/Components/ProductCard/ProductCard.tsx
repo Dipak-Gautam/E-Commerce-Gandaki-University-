@@ -34,7 +34,7 @@ const ProductCard = () => {
         <div className="absolute top-1 right-1 rounded-full p-2 shadow-md">
           <div className="relative ">
             <TbFlameFilled className="text-orange-600 text-4xl" />
-            <div className="absolute bottom-1.5 flex justify-center  text-white text-[10px]  w-full">
+            <div className="absolute bottom-1.5 flex justify-center  text-white text-[10px]  w-full font-medium">
               {data.popularity}
             </div>
           </div>
