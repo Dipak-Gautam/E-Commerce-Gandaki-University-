@@ -1,6 +1,7 @@
 import type { ProductSchema } from "../../Schema/data.schema";
 import AddToCart from "../Button/AddToCart";
 import StarCalc from "../ProductPage/Components/ProductCard/StarCalc";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 interface ProductDetailsProps {
   data: ProductSchema;
@@ -20,7 +21,12 @@ const ProductDetails = ({ open, setOpen, data }: ProductDetailsProps) => {
         className="bg-white  border rounded-xl opacity-100 w-[70%] overflow-hidden flex gap-10 shadow-2xl shadow-black/50 border-gray-300 hover:shadow-xl  hover:shadow-black/50 transition-all duration-300 ease-in-out relative"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="absolute"></div>
+        <div
+          className="absolute   top-2 left-2 z-10 bg-orange-500 p-1.5 rounded-full"
+          onClick={() => setOpen(false)}
+        >
+          <IoMdArrowRoundBack className="text-xl text-white" />
+        </div>
         <div className="relative w-[60%]">
           <img
             src="https://www.nutritionfact.in/wp-content/uploads/2022/07/cocnut-water.jpg"
