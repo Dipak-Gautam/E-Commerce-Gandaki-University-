@@ -6,7 +6,7 @@ interface StarCalcProps {
 
 const StarCalc = ({ rating }: StarCalcProps) => {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center w-fit">
       {Array.from({ length: 5 }, (_, index) => (
         <IoMdStar
           key={index}
