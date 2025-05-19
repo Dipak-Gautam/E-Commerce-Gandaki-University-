@@ -1,3 +1,4 @@
+import removeItemCart from "../../../LocalStorage/removeItemCart";
 import type { ProductSchema } from "../../../Schema/data.schema";
 import StarCalc from "../../ProductPage/Components/ProductCard/StarCalc";
 import { IoTrashBin } from "react-icons/io5";
@@ -7,7 +8,6 @@ interface CartItemProp {
 }
 
 const CartItem = ({ data }: CartItemProp) => {
-  console.log("data", data);
   return (
     <div className="border rounded-xl overflow-hidden flex relative">
       <div>
@@ -26,7 +26,10 @@ const CartItem = ({ data }: CartItemProp) => {
         </div>
       </div>
       <div className="absolute right-1 top-1 bg-red-500 p-1 rounded-full">
-        <IoTrashBin className="text-white cursor-pointer" />
+        <IoTrashBin
+          className="text-white cursor-pointer"
+          onClick={() => removeItemCart(data)}
+        />
       </div>
     </div>
   );

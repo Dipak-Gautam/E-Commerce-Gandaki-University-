@@ -3,6 +3,7 @@ import AddToCart from "../../../Button/AddToCart";
 import StarCalc from "./StarCalc";
 import { TbFlameFilled } from "react-icons/tb";
 import ProductDetails from "../../../ProductDetails/ProductDetails";
+import type { ProductSchema } from "../../../../Schema/data.schema";
 
 const data = {
   id: "1",
@@ -25,16 +26,20 @@ const data = {
   ],
 };
 
-const ProductCard = () => {
+interface ProductCardSchema {
+  data: ProductSchema;
+}
+
+const ProductCard = ({ data }: ProductCardSchema) => {
   const [open, setOpen] = useState(false);
   return (
     <>
       <div
-        className="border w-72 rounded-xl overflow-hidden shadow-lg bg-slate-50 hover:bg-white shadow-black/30 m-3 hover:shadow-xl  hover:border-white hover:shadow-black/50 transition-all duration-300 ease-in-out"
+        className="border w-96 rounded-xl overflow-hidden shadow-lg bg-slate-50 hover:bg-white shadow-black/30 m-3 hover:shadow-xl  hover:border-white hover:shadow-black/50 transition-all duration-300 ease-in-out"
         onClick={() => setOpen(true)}
       >
         <div className="relative">
-          <img src={`${data.image}`} alt="" />
+          <img src={`${data.image}`} alt="" className="h-56 w-full" />
           <div className="absolute top-1 right-1 rounded-full p-2 shadow-md">
             <div className="relative ">
               <TbFlameFilled className="text-orange-600 text-4xl" />
