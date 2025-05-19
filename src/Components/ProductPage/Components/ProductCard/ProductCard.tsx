@@ -56,8 +56,8 @@ const ProductCard = () => {
             <div className="text-orange-500 text-2xl font-bold">
               $ {data.price}
             </div>
-            <div className="w-[60%]">
-              <AddToCart />
+            <div className="w-[60%]" onClick={(e) => e.stopPropagation()}>
+              <AddToCart data={data} />
             </div>
           </div>
         </div>

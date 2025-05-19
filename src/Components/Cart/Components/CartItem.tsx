@@ -1,32 +1,17 @@
-import React from "react";
+import type { ProductSchema } from "../../../Schema/data.schema";
 import StarCalc from "../../ProductPage/Components/ProductCard/StarCalc";
+import { IoTrashBin } from "react-icons/io5";
 
-const data = {
-  id: "1",
-  image:
-    "https://www.nutritionfact.in/wp-content/uploads/2022/07/cocnut-water.jpg",
-  name: "Coconut Water",
-  rating: "5",
-  category: "Drinks",
-  popularity: 230,
-  price: 180,
-  description:
-    "Chilled coconut water infused with tender coconut pieces, lime juice, and a hint of honey, served over ice for a tropical refreshment.",
-  ingredients: [
-    "Coconut water",
-    "Tender coconut pieces",
-    "Lime juice",
-    "Honey",
-    "Ice cubes",
-    "Mint leaves",
-  ],
-};
+interface CartItemProp {
+  data: ProductSchema;
+}
 
-const CartItem = () => {
+const CartItem = ({ data }: CartItemProp) => {
+  console.log("data", data);
   return (
-    <div className="border rounded-xl overflow-hidden flex">
+    <div className="border rounded-xl overflow-hidden flex relative">
       <div>
-        <img src={data.image} alt="" className="h-40" />
+        <img src={data.image} alt="" className="h-32" />
       </div>
       <div className="p-3 px-5 w-full bg-slate-50 flex justify-between">
         <div className="w-fit flex flex-col h-full justify-center gap-4">
@@ -37,8 +22,11 @@ const CartItem = () => {
           {1}
         </div>
         <div className="text-orange-500 font-medium text-3xl flex justify-center items-center">
-          RS.{data.price}
+          Rs.{data.price}
         </div>
+      </div>
+      <div className="absolute right-1 top-1 bg-red-500 p-1 rounded-full">
+        <IoTrashBin className="text-white cursor-pointer" />
       </div>
     </div>
   );

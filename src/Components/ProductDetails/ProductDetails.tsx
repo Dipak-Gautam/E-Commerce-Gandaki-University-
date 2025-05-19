@@ -63,7 +63,7 @@ const ProductDetails = ({ open, setOpen, data }: ProductDetailsProps) => {
           </div>
 
           <div className="mx-5 my-3">
-            <AddToCart />
+            <AddToCart data={data} />
           </div>
         </div>
       </div>
