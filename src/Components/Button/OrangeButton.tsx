@@ -6,7 +6,7 @@ interface OrangeButtonProp extends ComponentProps<"div"> {
 const OrangeButton = ({ title, ...prop }: OrangeButtonProp) => {
   return (
     <div
-      className=" p-2 border bg-orange-500 text-white font-medium w-fit px-6 rounded-lg hover:bg-orange-600 cursor-pointer"
+      className=" p-2 border bg-orange-500 text-white font-medium w-fit px-6 rounded-lg hover:bg-orange-600 cursor-pointer text-xl"
       {...prop}
     >
       {title}
