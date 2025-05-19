@@ -6,7 +6,7 @@ import type { ProductSchema } from "../../Schema/data.schema";
 import getItemForCart from "../../LocalStorage/getItemForCart";
 
 const Cart = () => {
-  const [cartData] = useState<ProductSchema[]>(getItemForCart());
+  const [cartData, setCartData] = useState<ProductSchema[]>(getItemForCart());
 
   return (
     <div>
@@ -18,7 +18,7 @@ const Cart = () => {
       <div className="mx-24 my-5 ">
         <div className="flex flex-col gap-5">
           {cartData.map((item) => (
-            <CartItem data={item} key={item.id} />
+            <CartItem data={item} key={item._id} setCartData={setCartData} />
           ))}
         </div>
       </div>
