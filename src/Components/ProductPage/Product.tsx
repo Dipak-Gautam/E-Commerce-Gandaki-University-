@@ -18,7 +18,7 @@ const Product = () => {
   return (
     <div className="mx-20 my-10 flex flex-wrap gap-6 justify-center space-y-6  ">
       {productData.map((item: ProductSchema) => (
-        <ProductCard data={item} key={item.id} />
+        <ProductCard data={item} key={item._id} />
       ))}
     </div>
   );

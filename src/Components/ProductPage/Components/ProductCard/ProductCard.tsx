@@ -6,7 +6,7 @@ import ProductDetails from "../../../ProductDetails/ProductDetails";
 import type { ProductSchema } from "../../../../Schema/data.schema";
 
 const data = {
-  id: "1",
+  _id: "1",
   image:
     "https://www.nutritionfact.in/wp-content/uploads/2022/07/cocnut-water.jpg",
   name: "Coconut Water",

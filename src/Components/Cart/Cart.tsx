@@ -5,9 +5,11 @@ import CartItem from "./Components/CartItem";
 import type { ProductSchema } from "../../Schema/data.schema";
 import getItemForCart from "../../LocalStorage/getItemForCart";
 import TotalCalculate from "../../LocalStorage/TotalCalculate";
+import Checkout from "../../Esewa/Checkout";
 
 const Cart = () => {
   const [cartData, setCartData] = useState<ProductSchema[]>(getItemForCart());
+  const [open, onClose] = useState(false);
 
   return (
     <div>
@@ -29,8 +31,13 @@ const Cart = () => {
         <div className=" font-semibold">{TotalCalculate(cartData)}</div>
       </div>
       <div className="mx-24 flex justify-end my-4">
-        <OrangeButton title="Check Out" />
+        <OrangeButton title="Check Out" onClick={() => onClose(true)} />
       </div>
+      <Checkout
+        open={open}
+        onClose={() => onClose(false)}
+        amount={TotalCalculate(cartData).toString()}
+      />
     </div>
   );
 };
