@@ -24,7 +24,7 @@ const CategoryMenu = () => {
             <img src="/Icons/pizza.png" className="h-11  " />
           </div>
 
-          <div className="text-lg my-1 font-sans">All</div>
+          <div className="text-lg my-1 font-sans">Dinner</div>
         </div>
 
         <div className="flex flex-col items-center">

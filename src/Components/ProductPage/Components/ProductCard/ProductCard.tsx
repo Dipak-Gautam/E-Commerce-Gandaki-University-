@@ -1,30 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AddToCart from "../../../Button/AddToCart";
 import StarCalc from "./StarCalc";
 import { TbFlameFilled } from "react-icons/tb";
 import ProductDetails from "../../../ProductDetails/ProductDetails";
 import type { ProductSchema } from "../../../../Schema/data.schema";
-
-const data = {
-  _id: "1",
-  image:
-    "https://www.nutritionfact.in/wp-content/uploads/2022/07/cocnut-water.jpg",
-  name: "Coconut Water",
-  rating: "5",
-  category: "Drinks",
-  popularity: 230,
-  price: 180,
-  description:
-    "Chilled coconut water infused with tender coconut pieces, lime juice, and a hint of honey, served over ice for a tropical refreshment.",
-  ingredients: [
-    "Coconut water",
-    "Tender coconut pieces",
-    "Lime juice",
-    "Honey",
-    "Ice cubes",
-    "Mint leaves",
-  ],
-};
 
 interface ProductCardSchema {
   data: ProductSchema;
